@@ -1,0 +1,11 @@
+name: Build SD card image
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v25
+      - run: nix-build
