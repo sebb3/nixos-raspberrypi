@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: cachix/install-nix-action@v25
-      - run: nix-build
+      - run: nix build .#installerImages.rpi5
